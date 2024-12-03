@@ -1,7 +1,8 @@
 function main()
-        # Read and parse the data
+        # Import data
         data = [parse.(Int, split(line)) for line in readlines("./data/day2_dat.txt")]
 
+    # Part 1
     is_valid1 = Int[]
     for (i,row) in enumerate(data)
         diffs = diff(row)
@@ -34,3 +35,4 @@ end
 if abspath(PROGRAM_FILE) == @__FILE__
     main()
 end
+
